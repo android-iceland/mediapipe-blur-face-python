@@ -6,6 +6,15 @@
 This web app only run on localhost <br>
 Python version >=3.7 <br>
 
+
+# If you don't know how to install python
+Python installation tutorial:<br>
+https://youtu.be/UBsONplrOH4  <br>
+ 
+Install pip:(If you got an error pip not install )  <br>
+https://phoenixnap.com/kb/install-pip-windows  <br>
+
+
 ## step 1
 
 ```
