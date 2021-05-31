@@ -16,7 +16,7 @@ https://phoenixnap.com/kb/install-pip-windows  <br>
 
 
 ## step 1
-
+Open cmd or terminal and paste this line
 ```
 pip install -r requirements.txt
 ```
