@@ -39,3 +39,5 @@ Realtime face blur using webcam
 ```
 python webcam.py
 ```
+## click on this video to watch YouTube tutorial
+[![youtube video](https://i.ytimg.com/an_webp/SssGcxpKZTg/mqdefault_6s.webp?du=3000&sqp=CPiC14UG&rs=AOn4CLBYDSVSgACFfcLnKYHH_8Ul14mqTQ)](https://youtu.be/SssGcxpKZTg "Video Tutorial")
