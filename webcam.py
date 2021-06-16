@@ -18,10 +18,11 @@ class FaceDetector:
                 ih, iw, ic = img.shape
                 #add some value to increase the box size
                 bbox = (
-                    int(bboxC.xmin * iw), # -40 before coma
-                    int(bboxC.ymin * ih), # -80 before coma
-                    int(bboxC.width * iw), # +40 before coma
-                    int(bboxC.height * ih), # +80 before coma
+                    #play with the values to change the blur box area
+                            int(bboxC.xmin * iw) - 40,
+                            int(bboxC.ymin * ih) - 100,
+                            int(bboxC.width * iw) + 80,
+                            int(bboxC.height * ih) + 150,
                 )
                 #play with the value to increase box size
                 x, y, w, h = bbox
