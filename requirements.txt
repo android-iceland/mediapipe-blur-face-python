@@ -1,3 +1,4 @@
 mediapipe==0.8.3.1
 opencv-python==4.5.1.48
 streamlit==0.82.0
+ffmpeg-python
