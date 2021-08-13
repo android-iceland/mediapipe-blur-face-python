@@ -73,6 +73,7 @@ class FaceDetector:
 def main(detectionConfidence,blur_size,flip_the_video):
     global folder_path
     global input_file_path
+    FRAME_WINDOW = st.image([])
     input_file = input_file_path
     cap = cv2.VideoCapture(input_file)
     framerate = cap.get(cv2.CAP_PROP_FPS)
@@ -113,6 +114,8 @@ def main(detectionConfidence,blur_size,flip_the_video):
             break
 
         video_output.write(img)
+        frame = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        FRAME_WINDOW.image(frame) 
     video_output.release()
     cap.release()
     aduio_file = "./temp/audio.mp3"
