@@ -79,7 +79,7 @@ class BackgroundRemove:
         self.mp_drawing = mp.solutions.drawing_utils
         self.mp_selfie_segmentation = mp.solutions.selfie_segmentation
         self.selfie_segmentation=self.mp_selfie_segmentation.SelfieSegmentation(model_selection=1)
-    def remove_background(self ,img,option,original_background=None):
+    def remove_background(self ,img,option,original_background):
         if option == "color":
             BG_COLOR = (0, 255, 0)
         
@@ -99,7 +99,8 @@ class BackgroundRemove:
                 bg_image[:] = BG_COLOR
             elif option=="Upload a Image":
                 ih, iw, ic = image.shape
-                bg_image = original_background
+                bg_image=cv2.cvtColor(original_background, cv2.COLOR_RGB2BGR)
+                # bg_image = original_background
                 bg_image=cv2.resize(bg_image, (iw,ih))
                 # bg_image = cv2.GaussianBlur(bg_image,(55,55),0)
         output_image = np.where(condition, image, bg_image)
@@ -146,9 +147,10 @@ def main(detectionConfidence,blur_size,flip_the_video,option,original_background
             img = cv2.flip(img, 1)
         elif flip_the_video == "No":
             pass
+        
         try:
             if background_change:
-                img = background_remove_object.remove_background(img,option,original_background=None)
+                img = background_remove_object.remove_background(img,option,original_background)
             if enable_face_blur:
                 img = detector.findFaces(img, True)
         except Exception as e:
@@ -196,6 +198,7 @@ if __name__ == "__main__":
         background_blocker= True
 
     option=None
+    original_background=None
     if background_change:
         background_format = st.selectbox("Horizontally flip video ",("Color","Blur","Upload a Image"))
         if background_format=="Upload a Image":
@@ -210,7 +213,7 @@ if __name__ == "__main__":
     
     if st.button("Start Face Blur"):
         if flag:
-            main(detectionConfidence,blur_size,flip_the_video,option,original_background=None,enable_face_blur=face_blocker, background_change=background_blocker)
+            main(detectionConfidence,blur_size,flip_the_video,option,original_background,enable_face_blur=face_blocker, background_change=background_blocker)
             st.markdown(f"## Face blur complete check your export folder")
 
             for i in os.listdir("./temp/"):
