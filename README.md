@@ -47,3 +47,8 @@ python webcam.py
 streamlit run face_blur_and_background_change.py --server.maxUploadSize=5000
 ```
 ![Demo](https://github.com/android-iceland/mediapipe-blur-face-python/blob/main/demo/test.png)
+
+# Blur face and Change background
+```
+python face_block_and_background_change_webcam.py
+```
