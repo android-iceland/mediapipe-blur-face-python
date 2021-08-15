@@ -41,3 +41,9 @@ python webcam.py
 ```
 ## click on this video to watch YouTube tutorial
 [![youtube video](https://i.ytimg.com/an_webp/SssGcxpKZTg/mqdefault_6s.webp?du=3000&sqp=CPiC14UG&rs=AOn4CLBYDSVSgACFfcLnKYHH_8Ul14mqTQ)](https://youtu.be/SssGcxpKZTg "Video Tutorial")
+
+# Blur face and Change background
+```
+streamlit run face_blur_and_background_change.py --server.maxUploadSize=5000
+```
+![Demo](https://github.com/android-iceland/mediapipe-blur-face-python/blob/main/demo/test.png)
