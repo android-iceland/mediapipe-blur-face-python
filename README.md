@@ -1,7 +1,8 @@
 # mediapipe blur face python
-<p align="center">
-  <img src="https://github.com/android-iceland/mediapipe-blur-face-python/blob/main/demo/demo.gif" alt="animated" />
-</p>
+
+## Click on the video to watch on youtube
+ [![Watch the video](https://github.com/android-iceland/mediapipe-blur-face-python/blob/main/demo/demo.gif)](https://youtu.be/SssGcxpKZTg)
+
 <br>
 This web app only run on localhost <br>
 Python version >=3.7 <br>
@@ -39,8 +40,7 @@ Realtime face blur using webcam
 ```
 python webcam.py
 ```
-## click on this video to watch YouTube tutorial
-[![youtube video](https://i.ytimg.com/an_webp/SssGcxpKZTg/mqdefault_6s.webp?du=3000&sqp=CPiC14UG&rs=AOn4CLBYDSVSgACFfcLnKYHH_8Ul14mqTQ)](https://youtu.be/SssGcxpKZTg "Video Tutorial")
+
 
 # Blur face and Change background
 ```
